@@ -1022,3 +1022,33 @@ header > div {
     transform: translateX(-50%) translateY(0);
     opacity: 1;
 }
+/* =========================================
+   ABOUT PAGE MOBILE FIX
+   ========================================= */
+@media (max-width: 768px) {
+    /* ปรับ Layout จากซ้ายขวา เป็นบนล่าง */
+    .about-grid {
+        display: flex !important;
+        flex-direction: column;
+        gap: 30px !important;
+        padding: 40px 20px !important;
+    }
+
+    /* ปรับรูปภาพไม่ให้ยืดย้วย */
+    .about-image img {
+        width: 100% !important;
+        height: auto !important; /* สำคัญ: ป้องกันภาพยืด */
+        aspect-ratio: 4/3; /* กำหนดสัดส่วนให้สวยงาม */
+        object-fit: cover;
+    }
+
+    /* ปรับขนาดตัวหนังสือหัวข้อ */
+    .hero-title {
+        font-size: 2.5rem !important; /* ลดขนาดตัวใหญ่ยักษ์ลง */
+    }
+    
+    .about-hero {
+        padding: 60px 20px !important;
+        min-height: 40vh !important; /* ลดความสูงส่วนหัว */
+    }
+}
